@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file,jsonify, session, redirect, url_for
+from flask import Flask, render_template, request, send_file,jsonify, session, redirect, url_for,send_from_directory
 from moviepy.editor import VideoFileClip, AudioFileClip, CompositeVideoClip
 from moviepy.editor import VideoFileClip, concatenate_audioclips
 from moviepy.editor import VideoFileClip
@@ -220,7 +220,10 @@ def convert_jpeg_to_pdf(input_image, output_pdf):
 
     # Save the PDF file
     c.save()
-
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/')
 def index():
