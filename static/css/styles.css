@@ -1,0 +1,579 @@
+/* Styling for forms and download link */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 3;
+}
+.giant-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    color: #50efff;
+    font-size: 7em; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.giant {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    color:rgb(0, 255, 250);
+    font-size: 5em; /* Adjust the font size as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+nav {
+    position: absolute;
+    top: 50px; /* Adjust the top position as needed */
+    left: 50px; /* Adjust the left position as needed */
+    z-index: 4; /* Ensure the nav is above the video (increase the z-index if necessary) */
+}
+
+nav :not(.nav2) {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 40px; /* Adjust spacing between menu items */
+}
+
+
+.scroll-link {
+    text-decoration: none;
+    color: rgb(0, 255, 250);
+    font-weight: bold;
+    font-size: 3em;
+    transition: font-size 0.6s ease-in-out; /* Adding a smooth transition effect */
+}
+.link1:hover {
+    font-size: 3.5em; /* Increase font size on hover for link1 */
+}
+
+.link2:hover {
+    font-size: 3.5em; /* Increase font size on hover for link2 */
+}
+
+.link3:hover {
+    font-size: 3.5em; /* Increase font size on hover for link3 */
+}
+
+.link4:hover {
+    font-size: 3.5em; /* Increase font size on hover for link4 */
+}
+
+.forms-container {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin-bottom: 0px;
+  border-radius: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  border-radius: 15px;
+
+
+}
+
+input[type="number"],
+input[type="submit"] {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #00ffee;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #6000ff;
+}
+
+.camera-form {
+  background-color: #6EC6FF;
+  padding: 15px;
+}
+
+.no-camera-form {
+  background-color: #6EC6FF;
+  padding: 15px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container img {
+    width: 700px; /* Adjust the width as needed */
+    height: 400px; /* Maintain aspect ratio */
+    margin: 5px 20px 15px; /* Add some margin between images */
+    border-radius: 15px;
+}
+
+/* Apply hovering effect on both images */
+.hover-image:hover {
+    /* Add your desired hover effect styles */
+    /* For example, increase image size */
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+/* Style the button inside the overlay */
+.overlay button {
+    /* Add button styles as needed */
+}
+.download-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.download-link:hover {
+  background-color: #adefff;
+}
+section {
+
+    margin-bottom: 0;
+}
+
+#ScreenRecorder {
+    height: 1200x; /* Adjust height to allow for margins */
+    /* Other styles */
+}
+
+#about {
+    height: 1500px; /* Adjust height to allow for margins */
+    /* Other styles */
+}
+
+h1 {
+    margin: 20px; /* Adding margin to the bottom */
+    color: #FFFF00;
+    font-family: 'Grandstander', cursive; /* Nice font family */
+    font-size: 3.5em; /* Adjust the font size */
+
+}
+
+.content-container {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45d1fb;;
+
+
+
+}
+
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0px; /* Increase padding for more space on the sides */
+
+}
+
+h4, h5 {
+  color: #ff0000;
+  font-family: 'Grandstander', cursive;
+  font-size: 1.5em;
+  margin: 20px 0; /* Adjust margins to increase space between h4 and h5 */
+
+}
+
+h4 {
+  margin-right: auto; /* Pushes h4 further to the left */
+
+}
+
+h5 {
+  margin-left: auto; /* Pushes h5 further to the right */
+}
+
+.video-container_s {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px; /* Set the desired height for the video container */
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain video aspect ratio while covering the area */
+}
+/* Wrap form elements in a container and center them */
+
+/* Apply centering to the form elements */
+.f {
+    position: relative;
+    margin-left:400px;
+
+}
+
+h7 {
+    color: rgb(20, 250, 250);
+    font-size: 7em;
+    font-family: "Bodoni MT", "Didot", "Didot LT STD", serif;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: center;
+
+}
+
+label {
+
+    margin-bottom: 5px;
+
+    color: rgb(0 255 173);
+    font-family: 'Grandstander', cursive;
+    font-size: 2.5em;
+}
+
+input[type="file"],
+select,
+input[type="number"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 4px solid #008cff;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    color: rgb(0, 0, 250);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #adefff;
+}
+
+#merge {
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 2600px;
+}
+
+.content-above-image {
+    position: relative;
+    z-index: 1;
+}
+
+#square {
+    width: 200px;
+    height: 200px;
+    border: 4px solid  rgb(0, 255, 250);
+    position: relative;
+}
+
+#point {
+    width: 10px;
+    height: 10px;
+    background-color: #00cccc;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.selectedLine {
+    width: 4px;
+    height: 4px;
+    background-color: #ffcc00;
+    position: absolute;
+    display: none;
+
+}
+
+.image-container {
+    float: right;
+    margin-left: 20px;
+}
+
+.styled-image {
+    width: 150px;
+    height: auto;
+}
+
+.parent-container {
+    position: relative;
+
+}
+
+.b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: 50px;
+    z-index: 0;
+}
+.image_container {
+    display: flex;
+    position: relative;
+}
+
+.image-wrapper {
+    text-align: center;
+    margin-right: 60px; /* Adjust spacing between images as needed */
+    margin-bottom: 80px;
+}
+
+.image-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 3.5em;
+    color: rgb(20, 250, 250);
+    font-family: 'Grandstander', cursive;
+}
+
+.image_container img {
+    width: 150px;
+    height: auto;
+}
+
+.image_container img:first-child {
+    width: 100px; /* Increase width of the first image */
+    z-index: 1; /* Ensure the first image is in front */
+    position: absolute; /* Position the first image absolutely */
+    top: 0; /* Adjust positioning as needed */
+    left: 0; /* Adjust positioning as needed */
+}
+.image-wrapper:not(:first-child) {
+     /* Create space for the larger first image */
+    text-align: center;
+}
+#Convert{
+ height: 1000px;
+}
+
+.parent-convert {
+    position: relative;
+
+}
+
+.c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: 50px;
+
+}
+.e {
+    position: relative;
+    margin-left:400px;
+
+}
+.image-container-convert {
+            margin:30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container-convert img {
+            border-radius: 10px;
+            width: 300px;
+            height: auto;
+            margin: 10px; /* Adjust as needed for spacing */
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+.clicked  {
+
+  opacity: 2.9;
+  border: 6px inset rgb(220, 0, 50);
+}
+.image-container-convert img:hover {
+    opacity: 0.7; /* Change the opacity value on hover or when clicked */
+}
+
+h8 {
+    position: absolute;
+    color: rgb(0 227 250);
+    font-size: 6em;
+    font-family: "Bodoni MT", "Didot", "Didot LT STD", serif;
+    margin-bottom: 80px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+
+}
+.my-label {
+    font-size: 3em;
+    /* Override specific styles for this label */
+    /* For example, if you want to change the color to a nice shade of green and make it bold */
+    color: #000ffb; /* Nice shade of green */
+    font-weight: bold;
+}
+.my-label1{
+
+
+
+    margin-bottom: 5px;
+    /* font-weight: bold; */
+    color: #ffff00;
+    font-family: 'Grandstander', cursive;
+    font-size: 4em;
+    }
+.logo {
+  width:150px; /* Set your logo width */
+  height: 100px; /* Set your logo height */
+  background-image: url('/static/images/logo.png'); /* Replace with your logo image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  border-radius: 100px;
+   z-index: 5;
+  top: 40px; /* Adjust the distance from the top as needed */
+  right: 0px; /* Adjust the distance from the right as needed */
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.4); /* Change the scale to make it larger on hover */
+}
+
+
+#AboutUs{
+ height: 700px;
+}
+
+/* Image styles */
+.image-and-nav {
+    display: flex;
+    align-items: flex-start; /* Align items at the start (top) of the flex container */
+    background-color: #119fda;
+
+}
+
+.image--container {
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
+
+.image--container img {
+    width: 580px; /* Set the width of the image as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 290px;
+}
+
+/* Links styles */
+.links {
+    display: flex;
+    flex-direction: column; /* Arrange links vertically */
+    /* Add other styles for the links container as needed */
+    justify-content: flex-start; /* Align links to the top */
+    align-items: flex-start; /* Align links to the start */
+    margin-top: 95px;
+    font-family: 'Grandstander', cursive;
+
+
+
+}
+
+.links a {
+    color:rgb(255 235 177); /* Change link color to blue (you can use any color code you prefer) */
+    font-size: 2em; /* Set font size to 1.2 times the default size */
+    text-decoration: none; /* Remove default underline */
+    margin-bottom: 70px;
+    transition: all 1.5s ease;
+}
+.links a:first-child {
+    margin-top: 70px; /* Add margin above the first link */
+}
+.links a:hover {
+    text-decoration: underline;
+    color: rgb(4 243 27); /* Change text color on hover */
+    font-size: 2.6em; /* Increase font size on hover */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle shadow on hover */
+}
+p {
+    color: #ffcc00;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 120px;
+    background-color: #00cccc;
+    height: 30px;
+    width:360px;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-top:4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links a:nth-child(2)
+ {
+    padding-left: 50px; /* Add padding to the second and third <a> elements */
+}
+
+.links a:nth-child(3) {
+    padding-left: 90px; /* Add padding to the second and third <a> elements */
+}
+
+.links a:nth-child(4) {
+    padding-left: 90px; /* Add padding to the second and third <a> elements */
+}
+
+.links a:nth-child(5) {
+    padding-left: 50px; /* Add padding to the second and third <a> elements */
+}
+#meni
+{
+    height: 55px;
+    font-size: 45px;
+    width:315px;
+    margin-left: 140px;
+     padding-top:0px;
+
+
+}

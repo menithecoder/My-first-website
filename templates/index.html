@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Code</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+     <script src="/static/js/custom.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+
+
+     <div class="video-container">
+
+
+         <div class="logo" onclick="openMultipleLinks()">
+      <!-- Your logo image or text -->
+         </div>
+
+      <video id="myVideo" autoplay muted>
+        <source src="{{ url_for('static', filename='start.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+     </div>
+    <h3 class="giant-text">Everything you need is here</h3>
+    <br>
+    <h6 class="giant">All for free</h6>
+    <!-- Other header content like logos, navigation, etc. -->
+    <nav>
+        <ul>
+            <li><a href="#ScreenRecorder" class="scroll-link link1">Screen Recorder</a></li>
+        <li><a href="#merge" class="scroll-link link2">Merge two images</a></li>
+        <li><a href="#Convert" class="scroll-link link3">File Converter</a></li>
+        <li><a href="#AboutUs" class="scroll-link link4">About us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+ </div>
+    <section id="ScreenRecorder">
+       <div class="video-container_s">
+            <div class="video-wrapper">
+
+         <video id="myVideo_1" autoplay muted>
+            <source src="{{ url_for('static', filename='screen.mp4') }}" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+        </div>
+     </div>
+
+
+
+        <div class="content-container">
+            <div class="title-container">
+
+                <h1 >Screen Recorder (+ voice Recorder)</h1>
+                    <div class="titles">
+                        <h4>Record with camera</h4>
+                        <h5>Record without camera</h5>
+                    </div>
+
+
+
+
+            </div>
+            <div class="image-container">
+
+                <img src="{{ url_for('static', filename='images/with_camera.png') }}" alt="Left Image"class="hover-image" id="withCamera">
+                <img src="{{ url_for('static', filename='images/without_camera.jpeg') }}" alt="Right Image"class="hover-image" id="withoutCamera">
+            </div>
+
+            <div class="forms-container">
+                <form class="camera-form" action="/process_with_camera" method="post">
+                    <input type="number"  name="minutes" id="minutesInput" placeholder="Minutes">
+
+                    <input type="submit"  value="Start Recording">
+                </form>
+                <form class="no-camera-form" action="/process" method="post">
+                    <input type="number"  name="minutes" id="minutesInput_1" placeholder="Minutes">
+
+                    <input type="submit"  value="Start Recording">
+                </form>
+            </div>
+
+            <a href="/download_output" class="download-link" download="output_video.mp4">Download Movie</a>
+        </div>
+          <div class="video-wrapper">
+
+         <video id="myVideo_2" autoplay muted>
+            <source src="{{ url_for('static', filename='screen.mp4') }}" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+        </div>
+
+
+    </section>
+    </div>
+
+
+    <!-- Additional sections can be added here -->
+    <section id="merge" class="parent-container">
+
+        <!-- squere and move the image around -->
+
+
+
+
+            <img src="{{ url_for('static', filename='merged_image.jpeg') }}" alt="Example Image" class="b">
+            <br>
+
+        <form class="f" action="/merge_images" method="post" enctype="multipart/form-data">
+            <h7 id="1">Merge images</h7>
+
+
+                <label for="file1">Select Image 1:</label>
+                <input type="file" class="file-input" id="file1" name="file1" onchange="showImagePath(this, 'file1Path')">
+                <span id="file1Path"></span>
+
+
+
+                <label for="file2">Select Image 2:</label>
+                <input type="file" class="file-input" id="file2" name="file2" onchange="showImagePath(this, 'file2Path')">
+                <span id="file2Path"></span>
+
+
+            <label for="image_format">Select Image Format:</label><br>
+                <select id="image_format" name="image_format">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="gif">GIF</option>
+                    <option value="bmp">BMP</option>
+
+                </select><br><br>
+            <label for="dominate">Which picture do you want to change?(1/2):</label><br>
+
+            <select id="dominate" name="dominate">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+
+
+            </select><br>
+            <label for="point">Resize the image:</label><br>
+            <div id="square" onclick="getPosition(event)">
+            <div id="point"></div>
+            <div class="selectedLine verticalLine"></div>
+            <div class="selectedLine horizontalLine"></div>
+            </div>
+            <br>
+
+
+
+
+            <br>
+            <label for="corner">Which corner would you like to place the image on?</label><br>
+            <select id="corner" name="corner">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+
+
+            </select><br>
+            <input type="submit"  value="Merge Images">
+            <div class="image_container">
+                <div class="image-wrapper">
+            <span class="image-label">Risize like that =</span>
+            <img  src="{{ url_for('static', filename='images/resize.PNG') }}" alt="Image 1" class="first-image">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 1</span>
+            <img src="{{ url_for('static', filename='images/1.PNG') }}" alt="Image 1">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 2</span>
+            <img src="{{ url_for('static', filename='images/2.PNG') }}" alt="Image 2">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 3</span>
+            <img src="{{ url_for('static', filename='images/3.PNG') }}" alt="Image 3">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 4</span>
+            <img src="{{ url_for('static', filename='images/4.PNG') }}" alt="Image 4">
+        </div>
+    </div>
+
+        <br><br>
+
+
+            <div class="image_container">
+                <div class="image-wrapper">
+            <span class="image-label">Risize like that =</span>
+            <img  src="{{ url_for('static', filename='images/resize_1.PNG') }}" alt="Image 1" class="first-image">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 1,2,3,4</span>
+            <img src="{{ url_for('static', filename='images/=.PNG') }}" alt="Image 1">
+        </div>
+
+    </div>
+            <br><br>
+
+             <div class="image_container">
+                <div class="image-wrapper">
+            <span class="image-label">Risize like that =</span>
+            <img  src="{{ url_for('static', filename='images/resize_2.PNG') }}" alt="Image 1" class="first-image">
+        </div>
+        <div class="image-wrapper">
+            <span class="image-label"> 1,2,3,4</span>
+            <img src="{{ url_for('static', filename='images/=^.PNG') }}" alt="Image 1">
+        </div>
+
+    </div>
+
+
+
+         </form>
+
+    </section>
+
+    <section id="Convert"class="parent-convert">
+
+        <br>
+
+        <img src="{{ url_for('static', filename='convert.jpeg') }}" alt="Example Image" class="c" >
+            <br>
+        <form class="e" action="/convert" method="post" enctype="multipart/form-data">
+            <h8>File Converter</h8>
+            <label class="my-label" for="imageLabel">Chose file :</label>
+            <input type="file" name="file" accept=".png, .pdf, .docx, .jpeg, .jpg" id="imageLabel">
+
+            <br>
+            <label class="my-label1" for="image_forma">To which format do you wish to convert?</label>
+             <div class="image-container-convert" id="image_forma">
+                <img src="/static/images/PDF.jpeg" alt="Image 1" onclick="handleClick(this, 'PDF')" >
+                <img src="/static/images/JPEG.png" alt="Image 2" onclick="handleClick(this, 'JPEG')">
+                <img src="/static/images/PNG.jpeg" alt="Image 3" onclick="handleClick(this, 'PNG')" >
+                 <img src="/static/images/DOCX.jpeg" alt="Image 4" onclick="handleClick(this,'DOCX')">
+                 <br>
+
+        </div>
+            <input type="submit"  value="Convert">
+        </form>
+
+    </section>
+
+
+
+
+
+</main>
+<section id="AboutUs" class="about_end">
+
+    <aside>
+        <!-- Sidebar content or additional information -->
+        <!-- Content for the aside section -->
+    </aside>
+
+    <footer>
+        <!-- Footer content -->
+
+         <div class="image-and-nav">
+
+            <!-- Image on the left -->
+                <div class="image--container">
+                    <p id="meni">Menachem Levi</p>
+                    <br>
+                    <p>Develop it using Python utilizing Flask &copy;. </p>
+        <!-- Links -->
+                <img   src="static/images/meni.jpeg" alt="Image Description">
+                    </div>
+             <div class="links">
+                <a href="https://menachemle.wixsite.com/my-site-2" target="_blank">My resume</a></li>
+
+                <a href="https://github.com/menithecoder?tab=repositories" target="_blank">GitHub (This code included)</a></li>
+
+                <a href="https://meni-the-coder.itch.io/destroy-hamas-hard" target="_blank">Game that i invented</a></li>
+
+               <a href="https://www.youtube.com/@user-tp7lp3jy3k" target="_blank">My Youtube channel</a></li>
+
+                 <a href="https://www.linkedin.com/in/menachem-levi-603230266/" target="_blank">My LinkedIn Profile</a></li>
+
+                <a href="mailto:mnmrbs@gmail.com" target="_blank">Need A Website, reach out to me via email.</a></li>
+
+             </div>
+
+         </div>
+    </footer>
+</section>
+
+
+
+</body>
+</html>
