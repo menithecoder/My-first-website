@@ -222,8 +222,7 @@ def convert_jpeg_to_pdf(input_image, output_pdf):
     c.save()
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/x-icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/png')
 
 @app.route('/')
 def index():
