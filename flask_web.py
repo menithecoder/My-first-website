@@ -20,7 +20,7 @@ from reportlab.lib.pagesizes import letter
 from werkzeug.utils import secure_filename
 import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 app.secret_key = 'meni_the_coder'
 
 VIDEO_PATH = 'movie.avi'
