@@ -473,7 +473,7 @@ h8 {
   position: fixed;
   border-radius: 100px;
    z-index: 5;
-  top: 40px; /* Adjust the distance from the top as needed */
+  top: 30px; /* Adjust the distance from the top as needed */
   right: 0px; /* Adjust the distance from the right as needed */
   transition: transform 0.3s ease-in-out;
 }

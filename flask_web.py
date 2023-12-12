@@ -4,7 +4,7 @@ from moviepy.editor import VideoFileClip, concatenate_audioclips
 from moviepy.editor import VideoFileClip
 from moviepy.audio.io.AudioFileClip import AudioFileClip
 from record_camera import VideoRecorder
-import audio
+import a
 import movie
 import threading
 from PIL import Image
@@ -28,7 +28,7 @@ AUDIO_PATH = 'audio.wav'
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def create_audio(seconds):
-    audio.create_audio(seconds)
+    a.create_audio(seconds)
 
 def create_movie(seconds):
     movie.create_movie(seconds)
