@@ -27,7 +27,7 @@ class VideoRecorder(threading.Thread):
                 break
 
             out.write(frame)
-            
+
 
             # Calculate elapsed time and break if duration exceeded
             elapsed_time = time.time() - start_time
